@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>BackGround</title>
+</head>
+<body>
+    <div class="bg">
+        <img class="bg-image" src="/images/currency2.jpg" alt="">
+        <div class="content">
+            <div class="title">
+                <h1>Currency Converter <span>💱</span></h1>
+            </div>
+            <div class="converter">
+                <form action="" method="post">
+                    <div class="input">
+                        <label for="fromCurrency">from Currency</label>
+                        <select name="fromCurrency" id="fromCurrency">
+                            <option value="INR">INR</option>  
+                            <option value="USD">USD</option>  
+                            <option value="GBP">GBP</option>  
+                            <option value="AUD">AUD</option>  
+                            <option value="CAD">CAD</option>  
+                            <option value="JPY">JPY</option>  
+                        </select>
+                        <label for="toCorrency">toCurrency</label>
+                        <select name="toCurrency" id="toCurrency">
+                            <option value="USD">USD</option>  
+                            <option value="INR">INR</option>  
+                            <option value="GBP">GBP</option>  
+                            <option value="AUD">AUD</option>  
+                            <option value="CAD">CAD</option>  
+                            <option value="JPY">JPY</option>  
+                        </select>
+                        <br>
+                        <div class="amount">
+                            <label for="amount">Amount to be converted</label>
+                            <input type="text" name="amount" >
+                            <input type="submit" value="Convert" formaction="/convert">
+                        </div>
+                    </div>
+                
+                    <div class="result">
+                            <p> you gave <i><%=locals.amount%></i> <%=from%></p>
+                            <p> you get <i><%=locals.resultAmount%></i> <%=to%></p>
+                            <p> @conversion rate <%=rate%> </p>
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+    <footer>	&copy; copyright sudhakar vasa &reg;  <%=locals.year%></footer>
+</body>
+</html>
